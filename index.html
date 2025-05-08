@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Encryption Program | By Ryline Group</title>
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+		<h1 id="welcome-tag">Welcome to our Encryption Program!</h1>
+		<div class="text-fields">
+			<div id="message-div">
+				<label for="enc">Message: </label>
+				<input id="enc-input" name="enc" type="text" placeholder="Message">
+			</div>
+			
+			<div id="encrypted-div">
+				<label for="dec">Encrypted Text: </label>
+				<input id="dec-input" name="dec" type="text" placeholder="Encrypted Message" disabled>
+			</div>
+		</div>
+		
+		<div class="text-fields">
+			<label for="key">Key: </label>
+			<input id="key-input" name="key" type="text" placeholder="Enter 4-character key" maxlength=4>
+			<div id="key-error" class="error-message">Please enter a 4-character key</div>
+		</div>
+		
+		<div class="button-div">
+			<button id="enter-btn" onclick="keyCheck()">Enter</button><br>
+		</div>
+		
+		<div class="information" id="encryptInformation" style="display: block;">
+			Welcome to our encryption program!<br>
+			Input your message in the “message” field and input a random 4-character key (4 letters, numbers, or special characters).<br>
+			Hit the “Enter” button and get your encrypted message in the “Encrypted Text” field.<br><br>
+			Can’t think of something? Try to encrypt this message:<br>
+			Message: This is my secret message.<br>
+			Key: cyga<br>
+			Copy the encrypted message and the key, then give it to your friend so they can decode it.<br><br>
+			If you want to decrypt something, click the “Decrypt” button.<br>
+		</div>
+		
+		<div class="information" id="decryptInformation" style="display: none;">
+			Welcome to our decryption program!<br>
+			Input your encrypted text in the “Encrypted Text” field and input the 8-character key (4 letters, numbers, or special characters) given to you.<br>
+			Hit the “Enter” button and you will now be able to read the message.<br><br>
+			Can’t think of something? Try to decrypt this message:<br>
+			Encrypted Text: ǽȚȡȡȤǕȚȫȚȧȮȤȣȚǖ<br>
+			Key: crrn<br>
+			Now you’ll be able to read the message.<br><br>
+			If you want to encrypt something, click the “Encrypt” button.<br>
+		</div>
+		
+		<div class="button-div">
+			<button id="toggle-btn" onclick="toggle()">Decrypt</button>
+		</div>
+		<script src="script.js"></script>
+	</body>
+</html>
